@@ -1,0 +1,22 @@
+@import "mixins";
+
+.todos-header {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-left: 10px;
+    @include button-mixin;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  &__today-amount {
+    color: var(--primary-color);
+  }
+}

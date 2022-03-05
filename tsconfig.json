@@ -18,6 +18,16 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "paths": {
+      "~components/*": ["src/app/components/*"],
+      "~directives/*": ["src/app/directives/*"],
+      "~pipes/*": ["src/app/pipes/*"],
+      "~services/*": ["src/app/services/*"],
+      "~mocks/*": ["src/app/mocks/*"],
+      "~types": ["src/app/types"],
+      "~utils": ["src/app/utils"],
+      "~constants": ["src/app/constants"]
+    },
     "lib": [
       "es2020",
       "dom"
