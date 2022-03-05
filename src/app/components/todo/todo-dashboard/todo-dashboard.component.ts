@@ -1,6 +1,6 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
-import {Todo} from "~types";
+import {Component, OnInit} from '@angular/core';
 import {TodoService} from "~services/todo.service";
+import {Todo} from "~types";
 
 @Component({
   selector: 'app-todo-dashboard',

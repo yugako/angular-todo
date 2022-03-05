@@ -16,6 +16,9 @@ export class HighlightStatusDirective implements OnInit{
   }
 
   private highlightStatus() {
-    Object.assign(this.el.nativeElement.style, TODO_STATUSES_VIEW[this.appHighlightStatus as keyof TStatusesView]);
+    Object.assign(
+      this.el.nativeElement.style,
+      TODO_STATUSES_VIEW[this.appHighlightStatus as keyof TStatusesView]
+    );
   }
 }

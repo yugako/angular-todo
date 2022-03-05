@@ -1,5 +1,9 @@
 <app-todo-wrapper>
   <app-search-bar></app-search-bar>
-  <app-todo-header [todosAmount]="(todos | filterTodos: searchQuery).length"></app-todo-header>
-  <app-todo-list [todos]="todos | filterTodos: searchQuery"></app-todo-list>
+  <app-todo-header
+    [todosAmount]="(todos | filterTodos: searchQuery).length"
+  ></app-todo-header>
+  <app-todo-list
+    [todos]="todos | filterTodos: searchQuery"
+  ></app-todo-list>
 </app-todo-wrapper>

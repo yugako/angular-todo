@@ -16,6 +16,9 @@ export class MarkSeverityDirective {
   }
 
   private highlightStatus() {
-    Object.assign(this.el.nativeElement.style, TODO_SEVERITY_VIEW[this.appMarkSeverity as keyof TSeverityView]);
+    Object.assign(
+      this.el.nativeElement.style,
+      TODO_SEVERITY_VIEW[this.appMarkSeverity as keyof TSeverityView]
+    );
   }
 }

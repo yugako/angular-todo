@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {TodoService} from "~services/todo.service";
-import { v4 as uuidv4 } from 'uuid';
 import {FormControl, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
-import {TODO_SEVERITY_OPTIONS, TODO_STATUSES_OPTIONS} from "~constants";
-import {TSelectOptions} from "~types";
 
+import { v4 as uuidv4 } from 'uuid';
+
+import {TodoService} from "~services/todo.service";
+import {TSelectOptions} from "~types";
+import {TODO_SEVERITY_OPTIONS, TODO_STATUSES_OPTIONS} from "~constants";
 
 @Component({
   selector: 'app-todo-new',

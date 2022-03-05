@@ -1,11 +1,13 @@
 import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from "rxjs";
 import {Todo} from "~types";
 import {TODO_LIST} from "~mocks/todo-list";
-import {BehaviorSubject, Observable} from "rxjs";
 
 interface ITodo {
   searchQueryObserver: Observable<string>;
-  todosList: Todo[]
+  todosList: Todo[];
+  setQuery: (query: string) => void;
+  addNewTodo: (todo: Todo) => void;
 }
 
 @Injectable({

@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import {includes, toLower} from "ramda";
 import {Todo} from "~types";
 
 @Pipe({
@@ -10,6 +11,9 @@ export class FilterPipe implements PipeTransform {
     if (!todos?.length) return [];
     if (!query) return todos;
 
-    return todos.filter(({text}) => text.toLowerCase().includes(query.toLowerCase()));
+    return todos.filter(({text}) => includes(
+      toLower(query),
+      toLower(text)
+    ))
   }
 }
