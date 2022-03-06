@@ -1,0 +1,17 @@
+<header class="todos-header">
+  <h1 class="todos-header__title" *ngIf="todosAmount; else noTodos">
+    You’ve got <strong class="todos-header__today-amount">{{todosAmount}} task </strong> today
+  </h1>
+
+  <ng-template #noTodos>
+    <h1 class="todos-header__title">
+      You do not have any todos
+    </h1>
+  </ng-template>
+
+  <button class="todos-header__button" routerLink="new-todo">
+    <img src="assets/icon/add.png" alt="">
+    <span>Add new</span>
+  </button>
+</header>
+
