@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable} from "rxjs";
-import {Todo} from "~types";
-import {TODO_LIST} from "~mocks/todo-list";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { Todo } from '~types';
+import { TODO_LIST } from '~mocks/todo-list';
 
 interface ITodo {
   searchQueryObserver: Observable<string>;
@@ -11,9 +11,9 @@ interface ITodo {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class TodoService implements ITodo{
+export class TodoService implements ITodo {
   private todos: Todo[] = TODO_LIST;
   private searchQuery = new BehaviorSubject<string>('');
 
@@ -21,7 +21,7 @@ export class TodoService implements ITodo{
     return this.searchQuery.asObservable();
   }
 
-  get todosList () {
+  get todosList() {
     return this.todos;
   }
 

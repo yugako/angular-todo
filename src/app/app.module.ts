@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 /* Components */
@@ -34,14 +34,10 @@ import { MarkSeverityDirective } from '~directives/mark-severity.directive';
     TodoNewComponent,
     TodoWrapperComponent,
     MarkSeverityDirective,
-    FilterPipe
+    FilterPipe,
   ],
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      ReactiveFormsModule
-    ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

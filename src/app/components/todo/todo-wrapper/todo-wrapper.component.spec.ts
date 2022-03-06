@@ -8,9 +8,8 @@ describe('TodoWrapperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TodoWrapperComponent ]
-    })
-    .compileComponents();
+      declarations: [TodoWrapperComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

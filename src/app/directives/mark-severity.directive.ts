@@ -1,12 +1,11 @@
-import {Directive, ElementRef, Input} from '@angular/core';
-import {TODO_SEVERITY_VIEW} from "~constants";
-import {TSeverityView} from "~types";
+import { Directive, ElementRef, Input } from '@angular/core';
+import { TODO_SEVERITY_VIEW } from '~constants';
+import { TSeverityView } from '~types';
 
 @Directive({
-  selector: '[appMarkSeverity]'
+  selector: '[appMarkSeverity]',
 })
 export class MarkSeverityDirective {
-
   @Input() appMarkSeverity: string = '';
 
   constructor(private el: ElementRef) {}

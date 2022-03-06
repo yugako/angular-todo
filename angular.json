@@ -16,7 +16,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -109,9 +108,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "todo-app"
+  "defaultProject": "todo-app",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
