@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Todo } from '~types';
+import { TodoService } from '~services/todo.service';
 
 @Component({
   selector: 'app-todo-item',
@@ -8,9 +9,16 @@ import { Todo } from '~types';
 })
 export class TodoItemComponent {
   @Input() todo: Todo = {
-    deadline: new Date(),
-    severity: '',
-    status: '',
+    id: '',
     text: '',
+    status: '',
+    severity: '',
+    deadline: new Date().toLocaleDateString('en-CA'),
   };
+
+  constructor(private todosService: TodoService) {}
+
+  removeTodo(id: string) {
+    this.todosService.removeTodo(id);
+  }
 }

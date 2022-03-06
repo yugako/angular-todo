@@ -2,8 +2,8 @@ export type Todo = {
   text: string;
   status: string;
   severity: string;
-  deadline: Date;
-  id?: string;
+  deadline: string;
+  id: string;
 };
 export type TStatusesView = {
   pending: {
@@ -39,4 +39,10 @@ export type TSeverityView = {
 export type TSelectOptions = {
   value: string;
   label: string;
+};
+
+export type TErrorMessage = {
+  [key: string]: {
+    [key: string]: string;
+  };
 };

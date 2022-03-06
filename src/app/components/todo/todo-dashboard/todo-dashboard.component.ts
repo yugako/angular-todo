@@ -14,8 +14,17 @@ export class TodoDashboardComponent implements OnInit {
   constructor(private todosService: TodoService) {}
 
   ngOnInit(): void {
-    this.todos = this.todosService.todosList;
+    this.onTodosSubscribe();
+    this.onSearchQuerySubscribe();
+  }
 
+  onTodosSubscribe() {
+    this.todosService.todosItemsObserver.subscribe((todos: Todo[]) => {
+      this.todos = todos;
+    });
+  }
+
+  onSearchQuerySubscribe() {
     this.todosService.searchQueryObserver.subscribe((query: string) => {
       this.searchQuery = query;
     });

@@ -1,0 +1,14 @@
+export const DEFAULT_DATE_LOCALE = 'en-CA';
+
+export enum STATUSES_COLORS {
+  PENDING = '242, 153, 74',
+  IN_PROGRESS = '86, 204, 242',
+  COMPLETED = '39, 174, 96',
+  CANCELLED = '235, 87, 87',
+}
+
+export enum SEVERITY_COLORS {
+  MINOR = '#219653',
+  NORMAL = '#F2C94C',
+  CRITICAL = '#EB5757',
+}

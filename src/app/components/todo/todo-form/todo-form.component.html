@@ -1,0 +1,52 @@
+<form class="todo-form" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+  <div class="todo-form__group">
+    <label class="todo-form__group-label" for="text">
+      What do you need to do?
+    </label>
+    <input id="text" class="todo-form__group-input" type="text" formControlName="text">
+    <app-field-error
+      [field]="todoForm.get('text')"
+      fieldName="text"
+      [errorMessages]="validationMessages"
+    ></app-field-error>
+  </div>
+  <div class="todo-form__group">
+    <label class="todo-form__group-label" for="status">
+      Define to do status
+    </label>
+    <select id="status" class="todo-form__group-select" formControlName="status">
+      <option *ngFor="let option of todoStatusesOptions;" [ngValue]="option.value">{{option.label}}</option>
+    </select>
+    <app-field-error
+      [field]="todoForm.get('status')"
+      fieldName="text"
+      [errorMessages]="validationMessages"
+    ></app-field-error>
+  </div>
+
+  <div class="todo-form__group">
+    <label class="todo-form__group-label" for="severity">
+      What the importance of the task?
+    </label>
+    <select id="severity" class="todo-form__group-select" formControlName="severity">
+      <option *ngFor="let option of todoSeverityOptions;" [ngValue]="option.value">{{option.label}}</option>
+    </select>
+    <app-field-error
+      [field]="todoForm.get('severity')"
+      fieldName="text"
+      [errorMessages]="validationMessages"
+    ></app-field-error>
+  </div>
+
+  <div class="todo-form__group">
+    <label class="todo-form__group-label" for="deadline">Is there deadline for the task?</label>
+    <input id="deadline" class="todo-form__group-input" type="date" formControlName="deadline">
+    <app-field-error
+      [field]="todoForm.get('deadline')"
+      fieldName="text"
+      [errorMessages]="validationMessages"
+    ></app-field-error>
+  </div>
+
+  <button class="todo-form__submit-btn">Submit</button>
+</form>

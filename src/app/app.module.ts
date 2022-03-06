@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
 /* Components */
 import { AppComponent } from '~components/app-root/app.component';
 import { SearchBarComponent } from '~components/search-bar/search-bar.component';
@@ -12,14 +11,15 @@ import { TodoListComponent } from '~components/todo/todo-list/todo-list.componen
 import { TodoItemComponent } from '~components/todo/todo-item/todo-item.component';
 import { TodoNewComponent } from '~components/todo/todo-new/todo-new.component';
 import { TodoWrapperComponent } from '~components/todo/todo-wrapper/todo-wrapper.component';
-
+import { NotFoundComponent } from '~components/not-found/not-found.component';
+import { FieldErrorComponent } from '~components/form/field-error/field-error.component';
+import { TodoFormComponent } from '~components/todo/todo-form/todo-form.component';
+import { TodoEditComponent } from '~components/todo/todo-edit/todo-edit.component';
 /* Pipes */
 import { CamelCasePipe } from '~pipes/camelcase.pipe';
 import { FilterPipe } from '~pipes/filter.pipe';
-
 /* Directives */
 import { HighlightStatusDirective } from '~directives/highlight-status.directive';
-import { MarkSeverityDirective } from '~directives/mark-severity.directive';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,11 @@ import { MarkSeverityDirective } from '~directives/mark-severity.directive';
     CamelCasePipe,
     TodoNewComponent,
     TodoWrapperComponent,
-    MarkSeverityDirective,
     FilterPipe,
+    NotFoundComponent,
+    FieldErrorComponent,
+    TodoFormComponent,
+    TodoEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
