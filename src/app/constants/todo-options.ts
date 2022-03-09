@@ -1,4 +1,4 @@
-import { TSelectOptions, TSeverityView, TStatusesView } from '~types';
+import { Todo, TSelectOptions, TSeverityView, TStatusesView } from '~types';
 import { SEVERITY_COLORS, STATUSES_COLORS } from './common';
 
 export const TODO_STATUSES_VIEW: TStatusesView = {
@@ -65,3 +65,11 @@ export const TODO_SEVERITY_OPTIONS: TSelectOptions[] = [
     label: 'Critical',
   },
 ];
+
+export const EMPTY_TODO: Todo = {
+  id: '',
+  text: '',
+  severity: 'normal',
+  status: 'pending',
+  deadline: '',
+};

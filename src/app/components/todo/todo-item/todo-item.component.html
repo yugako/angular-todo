@@ -2,7 +2,7 @@
   <h5 class="todo-list__item-name">{{todo.text}}</h5>
 
   <p class="todo-list__item-status"
-     [appHighlightStatus]="todo.status | lowercase | camelcase"
+     [appHighlightStatus]="todo.status | camelcase"
      highlightType="status">
     {{todo.status | titlecase}}
   </p>

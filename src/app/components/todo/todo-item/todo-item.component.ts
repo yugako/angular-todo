@@ -13,7 +13,7 @@ export class TodoItemComponent {
     text: '',
     status: '',
     severity: '',
-    deadline: new Date().toLocaleDateString('en-CA'),
+    deadline: new Date().toLocaleDateString('en-US'),
   };
 
   constructor(private todosService: TodoService) {}

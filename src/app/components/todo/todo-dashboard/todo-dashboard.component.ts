@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TodoService } from '~services/todo.service';
 import { Todo } from '~types';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-todo-dashboard',
   templateUrl: './todo-dashboard.component.html',
-  styleUrls: ['./todo-dashboard.component.scss'],
 })
-export class TodoDashboardComponent implements OnInit {
+export class TodoDashboardComponent implements OnInit, OnDestroy {
   todos: Todo[] = [];
   searchQuery: string = '';
+
+  private subs: Array<Subscription> = [];
 
   constructor(private todosService: TodoService) {}
 
@@ -19,14 +21,22 @@ export class TodoDashboardComponent implements OnInit {
   }
 
   onTodosSubscribe() {
-    this.todosService.todosItemsObserver.subscribe((todos: Todo[]) => {
-      this.todos = todos;
-    });
+    this.subs.push(
+      this.todosService.todosItemsObserver.subscribe((todos: Todo[]) => {
+        this.todos = todos;
+      })
+    );
   }
 
   onSearchQuerySubscribe() {
-    this.todosService.searchQueryObserver.subscribe((query: string) => {
-      this.searchQuery = query;
-    });
+    this.subs.push(
+      this.todosService.searchQueryObserver.subscribe((query: string) => {
+        this.searchQuery = query;
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    this.subs.forEach((sub) => sub.unsubscribe());
   }
 }

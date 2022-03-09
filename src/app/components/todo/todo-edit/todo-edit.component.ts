@@ -6,7 +6,6 @@ import { TodoService } from '~services/todo.service';
 @Component({
   selector: 'app-todo-edit',
   templateUrl: './todo-edit.component.html',
-  styleUrls: ['./todo-edit.component.scss'],
 })
 export class TodoEditComponent implements OnInit {
   todo!: Todo | undefined;

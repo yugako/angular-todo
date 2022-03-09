@@ -13,7 +13,7 @@ export class FieldErrorComponent implements OnInit {
   @Input() fieldName!: string | null;
   @Input() errorMessages!: TErrorMessage;
 
-  errors: string[] = [];
+  errors: Array<string> = [];
 
   constructor() {}
 
