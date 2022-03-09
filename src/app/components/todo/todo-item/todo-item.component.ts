@@ -1,17 +1,24 @@
-import {Component, Input} from '@angular/core';
-import {Todo} from "~types";
+import { Component, Input } from '@angular/core';
+import { Todo } from '~types';
+import { TodoService } from '~services/todo.service';
 
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
-  styleUrls: ['./todo-item.component.scss']
+  styleUrls: ['./todo-item.component.scss'],
 })
 export class TodoItemComponent {
   @Input() todo: Todo = {
-    deadline: new Date(),
-    severity: "",
-    status: "",
-    text: ""
+    id: '',
+    text: '',
+    status: '',
+    severity: '',
+    deadline: new Date().toLocaleDateString('en-US'),
   };
 
+  constructor(private todosService: TodoService) {}
+
+  removeTodo(id: string) {
+    this.todosService.removeTodo(id);
+  }
 }

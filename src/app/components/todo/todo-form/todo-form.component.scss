@@ -1,0 +1,36 @@
+@import "mixins";
+
+.todo-form {
+  &__group {
+    margin-bottom: 10px;
+
+    &-label {
+      color: var(--dark-color);
+      display: block;
+      font-family: var(--secondary-font);
+      font-size: 14px;
+      line-height: 27px;
+    }
+
+    &-input, &-select {
+      border: none;
+      border-bottom: 1px solid var(--grey-color);
+      box-sizing: border-box;
+      padding: 7px 0;
+      transition: border-bottom-color 0.5s;
+      width: 100%;
+
+      &:focus {
+        border-bottom-color: var(--secondary-color);
+        outline: none;
+        transition: border-bottom-color 0.5s;
+      }
+    }
+  }
+
+  &__submit {
+    &-btn {
+      @include button-mixin;
+    }
+  }
+}

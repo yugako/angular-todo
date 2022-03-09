@@ -1,13 +1,13 @@
 @import "mixins";
 
 .todos-header {
-  display: flex;
   align-items: center;
+  display: flex;
 
   &__button {
-    display: flex;
     align-items: center;
     border: none;
+    display: flex;
     margin-left: 10px;
     @include button-mixin;
 

@@ -1,0 +1,7 @@
+.field-error {
+  &__value {
+    color: var(--danger-color);
+    font-family: var(--secondary-font);
+    font-size: 14px;
+  }
+}

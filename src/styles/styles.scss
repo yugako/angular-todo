@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-  --light-color: #ffffff;
+  --light-color: #fff;
   --dark-color: #1D262C;
   --grey-color: #E0E0E0;
   --primary-color: #F3477A;
   --secondary-color: #884CB2;
+  --danger-color: #EB5757;
   --primary-font: 'Poppins', sans-serif;
   --secondary-font: 'Montserrat', serif;
 }
@@ -21,8 +22,8 @@ p {
 }
 
 .container {
-  max-width: 1320px;
-  width: 100%;
-  padding: 0 15px;
   margin: auto;
+  max-width: 1320px;
+  padding: 0 15px;
+  width: 100%;
 }

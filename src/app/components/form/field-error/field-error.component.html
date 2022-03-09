@@ -1,0 +1,6 @@
+<div *ngIf="field?.invalid && (field?.dirty || field?.touched) && errors"
+     class="field-error__wrapper">
+    <span *ngFor="let error of errors" class="field-error__value">
+      {{error}}
+    </span>
+</div>

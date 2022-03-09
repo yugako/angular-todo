@@ -9,7 +9,6 @@ describe('CamelPipe', () => {
   it('should transform value into camelCase', function () {
     const pipe = new CamelCasePipe();
 
-
     expect(pipe.transform('In progress')).toBe('inProgress');
   });
 });

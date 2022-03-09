@@ -1,13 +1,13 @@
 .todo-list {
-  padding-left: 0;
-  margin-left: 0;
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 
   li + li::before {
-    content: '';
-    width: 100%;
-    height: 1px;
-    display: block;
     background-color: var(--grey-color);
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
   }
 }
